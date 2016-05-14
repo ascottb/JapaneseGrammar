@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Func" >
+        <CheckBoxPreference
+            android:key="cats"
+            android:title="Do you like cats?"
+            android:summary="The answer should be yes."
+            android:defaultValue="false" />
+        <EditTextPreference android:title="Wanikani API Key"
+            android:key = "wanikani"
+            android:summary="Get Wanikani key from online profile" />
+        <EditTextPreference android:title="Anki Path"
+            android:key = "anki"
+            android:summary="Enter path for Anki deck" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
