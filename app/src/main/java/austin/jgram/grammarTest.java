@@ -1,6 +1,5 @@
 package austin.jgram;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,16 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
-//import austin.jgram.Settings.Preferences;
-
-public class MainActivity extends AppCompatActivity {
-
-    ListView sentences;
+public class grammarTest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,35 +29,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        sentences = (ListView) findViewById(R.id.sentences);
-        String[] values = new String[] {
-                "３年というは長い時間だと私は思う",
-                "あなたが料理するのを見た",
-                "あの日は強い風が吹いていました"
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-        // Assign adapter to ListView
-        sentences.setAdapter(adapter);
-        // ListView Item Click Listener
-        sentences.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                // ListView Clicked item index
-                int itemPosition = position;
-                // ListView Clicked item value
-                String itemValue = (String) sentences.getItemAtPosition(position);
-                translationFragment trans = new translationFragment();
-                //trans.isVisible();
-                // Show Alert
-
-                Toast.makeText(getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-                        .show();
-            }
-
-        });
         //LoadingScreen load = new LoadingScreen(this);
 
     }
@@ -90,12 +52,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(settings_intent);
             return true;
         }
-        if (id == R.id.grammar_test) {
-            Intent intent = new Intent(getApplicationContext(), grammarTest.class);
-            startActivity(intent);
-            return true;
-        }
-
 
         return super.onOptionsItemSelected(item);
     }

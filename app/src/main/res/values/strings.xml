@@ -14,6 +14,13 @@
         completions."
     </string>
     <string name="title_activity_main">Welcome to JGram</string>
+    <string name="grammar_activity_main">Tests Here</string>
     <string name="action_settings">Settings</string>
     <string name="title_main">Random Japanese Sentences</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="grammar_test">Test</string>
+    <string name="grammar_main">Grammar</string>
+
+
 </resources>

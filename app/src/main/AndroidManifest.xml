@@ -32,6 +32,15 @@
                 android:value="austin.jgram.LoginActivity" />
         </activity>
         <activity
+            android:name=".grammarTest"
+            android:label="@string/grammar_activity_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="austin.jgram.MainActivity" />
+        </activity>
+        <activity
             android:name=".Settings.Preferences"
             android:label="Preferences"
             android:parentActivityName=".MainActivity"
