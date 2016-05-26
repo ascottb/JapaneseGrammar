@@ -13,6 +13,10 @@
         <EditTextPreference android:title="Anki Path"
             android:key = "anki"
             android:summary="Enter path for Anki deck" />
+        <Preference android:title="Profile Pic"
+            android:key = "prof"
+            android:summary="Click to choose profile picture" />
+
 
     </PreferenceCategory>
 

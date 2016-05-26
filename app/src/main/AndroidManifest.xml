@@ -41,6 +41,15 @@
                 android:value="austin.jgram.MainActivity" />
         </activity>
         <activity
+            android:name=".LoadingScreen"
+            android:label="@string/loading_activity_main"
+            android:parentActivityName=".LoadingScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="austin.jgram.MainActivity" />
+        </activity>
+        <activity
             android:name=".Settings.Preferences"
             android:label="Preferences"
             android:parentActivityName=".MainActivity"

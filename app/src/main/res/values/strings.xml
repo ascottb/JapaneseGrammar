@@ -15,8 +15,10 @@
     </string>
     <string name="title_activity_main">Welcome to JGram</string>
     <string name="grammar_activity_main">Tests Here</string>
+    <string name="loading_activity_main">Loading...</string>
     <string name="action_settings">Settings</string>
     <string name="title_main">Random Japanese Sentences</string>
+    <string name="title_settings">Some General Settings Here</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="grammar_test">Test</string>

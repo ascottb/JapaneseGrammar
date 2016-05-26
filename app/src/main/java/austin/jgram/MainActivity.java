@@ -61,9 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 //trans.isVisible();
                 // Show Alert
 
-                Toast.makeText(getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-                        .show();
+                if (itemPosition == 2) {
+                    //LoadingScreen load = new LoadingScreen(getApplicationContext());
+                    Intent settings_intent = new Intent(getApplicationContext(), austin.jgram.LoadingScreen.class);
+                    startActivity(settings_intent);
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),
+                            "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
+                            .show();
+                }
             }
 
         });

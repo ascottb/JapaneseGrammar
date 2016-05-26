@@ -1,8 +1,10 @@
 package austin.jgram.Settings;
 
 //import android.app.ActionBar;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.support.annotation.LayoutRes;
@@ -36,6 +38,7 @@ public class Preferences extends PreferenceActivity {
         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyPreferenceFragment()).commit();
         //addPreferencesFromResource(R.xml.preference_func);
 
+        //Preference myPref = (Preference) findPref
         //String action = getIntent().getAction();
         //if(action != null && action.equals(title_stuff)) {
          //   addPreferencesFromResource();
@@ -48,6 +51,18 @@ public class Preferences extends PreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preference_func);
+
+            Preference myPref = (Preference) findPreference("prof");
+            myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select Prof Pic"), 0);
+                    return true;
+                }
+            });
         }
     }
 
