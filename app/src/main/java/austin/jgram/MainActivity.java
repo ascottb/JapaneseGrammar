@@ -15,11 +15,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+
+
 //import austin.jgram.Settings.Preferences;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView sentences;
+    StringDatabase data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +36,27 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Logout Option", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Logout Option", Snackbar.LENGTH_LONG)
+                  //      .setAction("Action", null).show();
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sentences = (ListView) findViewById(R.id.sentences);
+        //NOT WORKING YET
+        //String url = "https://www.wanikani.com/api/user/7da5e5dd918c6aeec6f7e2a8063853da/kanji/1";
+
         String[] values = new String[] {
                 "３年というは長い時間だと私は思う",
                 "あなたが料理するのを見た",
                 "あの日は強い風が吹いていました"
         };
+
+        //UNCOMMENT FOR TESTING
+        data = new StringDatabase(this);
+        data.createData(values, 3);
+        data.getAllWords();
+        values = data.data;
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);
         // Assign adapter to ListView
@@ -57,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 int itemPosition = position;
                 // ListView Clicked item value
                 String itemValue = (String) sentences.getItemAtPosition(position);
-                translationFragment trans = new translationFragment();
+                //translationFragment trans = new translationFragment();
                 //trans.isVisible();
                 // Show Alert
 
@@ -66,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent settings_intent = new Intent(getApplicationContext(), austin.jgram.LoadingScreen.class);
                     startActivity(settings_intent);
 
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(),
                             "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
                             .show();

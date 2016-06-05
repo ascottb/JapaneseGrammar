@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="austin.jgram.grammarTest"
     tools:showIn="@layout/activity_grammar">
@@ -21,5 +22,56 @@
         android:id="@+id/grammar_main"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/first_grammar"
+        android:text="@string/g_butt1"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_grammar"
+        android:gravity="center_horizontal"
+        android:id="@+id/second_grammar"
+        android:layout_marginTop="16dp"
+        android:text="@string/g_butt2"
+        android:textStyle="bold"
+        android:layout_alignEnd="@+id/first_grammar"
+        android:layout_alignStart="@+id/first_grammar" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_grammar"
+        android:gravity="center_horizontal"
+        android:id="@+id/third_grammar"
+        android:layout_marginTop="16dp"
+        android:text="@string/g_butt3"
+        android:textStyle="bold"
+        android:layout_alignEnd="@+id/second_grammar"
+        android:layout_alignStart="@+id/second_grammar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/defaulttext"
+        android:id="@+id/textView"
+
+        android:background="@drawable/tab_item"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_below="@+id/grammar_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+
+        />
 
 </RelativeLayout>

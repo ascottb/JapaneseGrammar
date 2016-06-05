@@ -9,8 +9,8 @@
             android:defaultValue="false" />
         <EditTextPreference android:title="Wanikani API Key"
             android:key = "wanikani"
-            android:summary="Get Wanikani key from online profile" />
-        <EditTextPreference android:title="Anki Path"
+            android:summary="Get key from profile settings" />
+        <Preference android:title="Anki Path"
             android:key = "anki"
             android:summary="Enter path for Anki deck" />
         <Preference android:title="Profile Pic"

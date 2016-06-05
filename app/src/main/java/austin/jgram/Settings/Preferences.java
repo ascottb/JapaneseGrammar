@@ -63,6 +63,18 @@ public class Preferences extends PreferenceActivity {
                     return true;
                 }
             });
+
+            Preference myPref2 = (Preference) findPreference("anki");
+            myPref2.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType(".apkg");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select Anki Package"), 0);
+                    return true;
+                }
+            });
         }
     }
 

@@ -23,6 +23,11 @@
     <string name="save">Save</string>
     <string name="grammar_test">Test</string>
     <string name="grammar_main">Grammar</string>
+    <string name="g_butt1">Show Meaning</string>
+    <string name="g_butt2">New Word</string>
+    <string name="g_butt3">Learned</string>
+    <string name="userinfo">User information</string>
+    <string name="defaulttext">Please Connect Service</string>
 
 
 </resources>
